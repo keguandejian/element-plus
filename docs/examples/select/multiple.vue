@@ -6,6 +6,7 @@
       multiple
       placeholder="Select"
       style="width: 240px"
+      @change="aa"
     >
       <el-option
         v-for="item in options"
@@ -74,10 +75,15 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const value1 = ref([])
+const value1 = ref(['Option2','Option2'])
 const value2 = ref([])
 const value3 = ref([])
 const value4 = ref([])
+
+const aa = () => {
+  alert(value1);
+}
+
 const options = [
   {
     value: 'Option1',
